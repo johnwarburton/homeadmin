@@ -1,0 +1,9 @@
+DSTHACK=""
+if [ `perl -e '$val=(localtime)[8]; print "$val\n";'` ] ; then
+    DSTHACK="--modify-window=3601"
+fi
+
+
+mcmac# rsync $DSTHACK -va --delete /Volumes/Untitled/  /Volumes/NO\ NAME/truecrypt-backups
+mcmac# rsync --delete -av $DSTHACK /Volumes/NAS/iTunes/ /Volumes/NO\ NAME/iTunes 
+
