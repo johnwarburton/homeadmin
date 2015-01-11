@@ -1,0 +1,59 @@
+* Download from http://www.pocketmine.net/
+* Standard setup with wiza
+  
+  [*] You are going to set up your server now.
+  [*] If you don't want to change the default value, just press Enter.
+  [*] You can edit them later on the server.properties file.
+  [?] Give a name to your server (Minecraft: PE Server): home
+  [*] Do not change the default port value if this is your first server.
+  [?] Server port (19132): 
+  [*] The RAM is the maximum amount of memory PocketMine-MP will use. A value of 128-256 MB is recommended
+  [?] Server RAM in MB (256): 
+  [*] Choose between Creative (1) or Survival (0)
+  [?] Default Game mode: (0): 1
+  [?] Max. online players (20): 
+  [*] The spawn protection disallows placing/breaking blocks in the spawn zone except for OPs
+  [?] Enable spawn protection? (Y/n): Y
+  [*] An OP is the player admin of the server. OPs can run more commands than normal players
+  [?] OP player name (example, your game name): dad
+  [*] The white-list only allows players in it to join.
+  [?] Do you want to enable the white-list? (y/N): y
+  [!] You will have to add the players to the white-list
+  [!] Query is a protocol used by different tools to get information of your server and players logged in.
+  [!] If you disable it, you won't be able to use server lists.
+  [?] Do you want to disable Query? (y/N): N
+  [*] RCON is a protocol to remote connect with the server console using a password.
+  [?] Do you want to enable RCON? (y/N): N
+  [*] Getting your external IP and internal IP
+  [!] Your external IP is 150.101.201.132. You may have to port-forward to your internal IP 192.168.1.101
+  [!] Be sure to check it, if you have to forward and you skip that, no external players will be able to join. [Press Enter]
+  [*] You have finished the set-up wizard correctly
+  [*] Check the Plugin Repository to add new features, minigames, or advanced protection to your server
+  [*] PocketMine-MP will now start. Type /help to view the list of available commands
+  
+  q
+  
+
+* Start at server boot
+http://minecraft.gamepedia.com/Tutorials/Create_a_Mac_OS_X_startup_daemon
+http://minecraft.gamepedia.com/Tutorials/Setting_up_a_server
+http://hints.macworld.com/article.php?story=20130821103334157
+
+mcmac:homeadmin htpc$ cat /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+      <string>com.minecraft.minecraft-pe</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/Users/htpc/pocketmine/start.sh</string>
+    </array>
+    <key>RunAtLoad</key>
+      <true></true>
+    <key>UserName</key>
+      <string>htpc</string>
+    <key>WorkingDirectory</key>
+      <string>/Users/htpc/pocketmine</string>
+  </dict>
+</plist>
+
