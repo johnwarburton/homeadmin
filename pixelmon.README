@@ -1,0 +1,33 @@
+Pixelmon INstall
+================
+
+Instructions
+http://pixelmonmod.com/wiki/index.php?title=Download_and_installation
+
+1. Download & install minecraft server
+https://minecraft.net/download
+
+java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
+
+2. Download Forge
+
+http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.3.1450/forge-1.8-11.14.3.1450-universal.jar
+
+Says download the installer 
+
+curl http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8-11.14.3.1450/forge-1.8-11.14.3.1450-installer.jar > forge-1.8-11.14.3.1450-installer.jar
+
+
+Run the headless server install
+java -jar ./maybe/forge-1.8-11.14.3.1450-installer.jar --installServer
+
+http://www.minecraftforge.net/wiki/Installation/Universal#Headless_.28no_GUI.29_servers
+
+3. Run the foge server, not miecraft server, which starts up minecraft
+
+4. Download pixelmon
+http://pixelmonmod.com/downloads.php
+
+
+curl http://download.nodecdn.net/containers/pixelmon/core/Pixelmon-1.8-4.0.6-universal.jar >  Pixelmon-1.8-4.0.6-universal.jar
+
