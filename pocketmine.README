@@ -62,3 +62,5 @@ mcmac:homeadmin htpc$ cat /Library/LaunchDaemons/com.minecraft.minecraft-pe.plis
 </plist>
 
 $ sudo launchctl load /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
+
+
