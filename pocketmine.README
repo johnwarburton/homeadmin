@@ -1,3 +1,9 @@
+* create a user called minecraft:
+  - complicated password
+  - no ability to sudo
+* mcmac:~ minecraft$ mkdir minecraft-pe
+* mcmac:~ minecraft$ cd minecraft-pe/
+
 * Download from http://www.pocketmine.net/
 * Standard setup with wiza
   
