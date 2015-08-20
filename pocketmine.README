@@ -45,7 +45,7 @@ http://minecraft.gamepedia.com/Tutorials/Create_a_Mac_OS_X_startup_daemon
 http://minecraft.gamepedia.com/Tutorials/Setting_up_a_server
 http://hints.macworld.com/article.php?story=20130821103334157
 
-mcmac:homeadmin htpc$ cat /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
+mcmac:minecraft-pe minecraft$ cat /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC -//Apple Computer//DTD PLIST 1.0//EN http://www.apple.com/DTDs/PropertyList-1.0.dtd >
 <plist version="1.0">
@@ -54,16 +54,16 @@ mcmac:homeadmin htpc$ cat /Library/LaunchDaemons/com.minecraft.minecraft-pe.plis
       <string>com.minecraft.minecraft-pe</string>
     <key>ProgramArguments</key>
     <array>
-      <string>/Users/htpc/pocketmine/start.sh</string>
+      <string>/Users/minecraft/minecraft-pe/start.sh</string>
     </array>
     <key>RunAtLoad</key>
       <true/>
     <key>KeepAlive</key>
     <true/>
     <key>UserName</key>
-      <string>htpc</string>
+      <string>minecraft</string>
     <key>WorkingDirectory</key>
-      <string>/Users/htpc/pocketmine</string>
+      <string>/Users/minecraft/minecraft-pe</string>
   </dict>
 </plist>
 
