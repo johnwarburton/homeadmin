@@ -89,4 +89,33 @@ PocketMine-MP_1.4.1.phar:        data
 PocketMine-MP_1.4.1dev-936.phar: data
 
 
+OK _ everyone seems to be having issues. Look at github issues
+
+https://github.com/PocketMine/PocketMine-MP/issues/3815
+
+
+cmac:pocketmine htpc$ curl -o PocketMine-MP.phar https://jenkins.pocketmine.net/job/PocketMine-MP/1266/artifact/PocketMine-MP_1.6dev-1266_fb87165c_API-1.13.1.phar
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  5054    0  5054    0     0   2678      0 --:--:--  0:00:01 --:--:--  2678
+mcmac:pocketmine htpc$ file *.phar
+PocketMine-MP.phar:              HTML document text
+PocketMine-MP_1.4.1.phar:        data
+PocketMine-MP_1.4.1dev-936.phar: data
+mcmac:pocketmine htpc$ curl -o PocketMine-MP.phar https://transfer.sh/17asl/pocketmine-mp-1.6dev-1266-fb87165c-api-1.13.1.phar
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 3761k  100 3761k    0     0   409k      0  0:00:09  0:00:09 --:--:--  863k
+mcmac:pocketmine htpc$ file *.phar
+PocketMine-MP.phar:              data
+PocketMine-MP_1.4.1.phar:        data
+PocketMine-MP_1.4.1dev-936.phar: data
+
+
+mcmac:pocketmine htpc$ sudo launchctl unload /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
+Password:
+mcmac:pocketmine htpc$ sudo launchctl load /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
+mcmac:pocketmine htpc$ ps -ef | grep php
+  504  1541     1   0  5:19pm ??         0:00.43 ./bin/php5/bin/php ./PocketMine-MP.phar
+
 
