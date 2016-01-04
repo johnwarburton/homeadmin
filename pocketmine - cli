@@ -4,8 +4,20 @@ View source, and installation for various OS:
 
 Windows
 =======
-href="https://github.com/PocketMine/PocketMine-MP/releases" onclick="ga('send', 'event', 'PocketMine', 'download', 'Windows x86')
+href="https://github.com/PocketMine/PocketMine-MP/releases" 
+onclick="ga('send', 'event', 'PocketMine', 'download', 'Windows x86')
 
 Mac OSX
 ========
-onclick="ga('send', 'event', 'PocketMine', 'download', 'MacOS'); return true;"><span class="no-selectable" style="font-weight:bold;">$&nbsp;</span>curl -sL http://get.pocketmine.net/ | bash</pre>
+onclick="ga('send', 'event', 'PocketMine', 'download', 'MacOS'); return true;">
+<span class="no-selectable" style="font-weight:bold;">$&nbsp;</span>curl -sL http://get.pocketmine.net/ | bash</pre>
+
+
+Issues
+=======
+The official release from https://github.com/PocketMine/PocketMine-MP/releases/latest refers to it being 
+"For Minecraft: PE v0.10.5 alpha", but the IOS version is 0.13.1 (as of Jan 4 2016)
+
+So, the development builds says "he build 1266 using API 1.13.1 was released on Sat, 19 Dec 2015 23:41:43 GMT"
+
+Here - the API matches the IOS version
