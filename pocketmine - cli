@@ -1,0 +1,11 @@
+Downloads from http://www.pocketmine.net/
+
+View source, and installation for various OS:
+
+Windows
+=======
+href="https://github.com/PocketMine/PocketMine-MP/releases" onclick="ga('send', 'event', 'PocketMine', 'download', 'Windows x86')
+
+Mac OSX
+========
+onclick="ga('send', 'event', 'PocketMine', 'download', 'MacOS'); return true;"><span class="no-selectable" style="font-weight:bold;">$&nbsp;</span>curl -sL http://get.pocketmine.net/ | bash</pre>
