@@ -32,81 +32,33 @@ installing the stable version.
 Install
 ========
 
-mcmac:~ htpc$ cd pocketmine
-mcmac:pocketmine htpc$ ls -la
-total 16040
-drwxr-xr-x  29 htpc  staff      986  2 Aug 19:05 .
-drwxr-xr-x+ 36 htpc  staff     1224 19 Nov 20:15 ..
--rw-r--r--   1 htpc  staff     7984  1 Aug 16:55 CONTRIBUTING.md
--rw-r--r--   1 htpc  staff    15916  1 Aug 15:56 CrashDump_Sat_Aug_1-05.56.27-UTC_2015.log
--rw-r--r--   1 htpc  staff    15916  1 Aug 15:56 CrashDump_Sat_Aug_1-05.56.53-UTC_2015.log
--rw-r--r--   1 htpc  staff    15916  1 Aug 15:57 CrashDump_Sat_Aug_1-05.57.15-UTC_2015.log
--rw-r--r--   1 htpc  staff    15901  6 Jun  2015 CrashDump_Sat_Jun_6-07.00.40-UTC_2015.log
--rw-r--r--   1 htpc  staff    15901  6 Jun  2015 CrashDump_Sat_Jun_6-07.01.20-UTC_2015.log
--rw-r--r--   1 htpc  staff    13589  1 Apr  2015 CrashDump_Tue_Mar_31-14.51.04-UTC_2015.log
--rw-r--r--   1 htpc  staff     7650  1 Aug 16:55 LICENSE
--rw-r--r--   1 htpc  staff  3555801  1 Aug 16:55 PocketMine-MP.phar
--rw-r--r--   1 htpc  staff  2007478  6 Jun  2015 PocketMine-MP_1.4.1.phar
--rw-r-----@  1 htpc  staff  2005939  1 Aug 16:47 PocketMine-MP_1.4.1dev-936.phar
--rw-r--r--   1 htpc  staff     2736  1 Aug 16:55 README.md
--rw-r--r--   1 htpc  staff        0  2 Aug 19:06 banned-ips.txt
--rw-r--r--   1 htpc  staff        0  2 Aug 19:06 banned-players.txt
-drwxr-xr-x@  3 htpc  staff      102  1 Aug 16:55 bin
--rw-r--r--   1 htpc  staff        3  1 Aug 16:25 ops.txt
-drwxr-xr-x   4 htpc  staff      136  2 Aug 19:06 players
-drwxr-xr-x   2 htpc  staff       68 11 Jan  2015 plugins
--rw-r--r--   1 htpc  staff     2666 11 Jan  2015 pocketmine.yml
--rw-r--r--   1 htpc  staff    73615 20 Aug 14:01 server.log
--rw-r--r--   1 htpc  staff      488 20 Aug 14:01 server.properties
--rw-r--r--   1 htpc  staff      487  1 Aug 16:24 server.properties.x
--rwxr-xr-x   1 htpc  staff     1153  1 Aug 16:55 start.sh
--rw-r--r--   1 htpc  staff       22  2 Aug 19:05 white-list.txt
-drwxr-xr-x   3 htpc  staff      102 11 Jan  2015 worlds
--rw-r--r--   1 root  staff   206304  1 Aug 15:19 x
--rw-r--r--   1 root  staff   207102  1 Aug 15:20 y
-mcmac:pocketmine htpc$ wget http://jenkins.pocketmine.net/job/PocketMine-MP/1266/artifact/PocketMine-MP_1.6dev-1266_fb87165c_API-1.13.1.phar
--bash: wget: command not found
-mcmac:pocketmine htpc$ curl -o PocketMine-MP.phar http://jenkins.pocketmine.net/job/PocketMine-MP/1266/artifact/PocketMine-MP_1.6dev-1266_fb87165c_API-1.13.1.phar
+Become the minecraft user
+
+mcmac:~ htpc$ sudo su - minecraft
+mcmac:~ minecraft$ cd minecraft-pe/
+
+mcmac:minecraft-pe minecraft$ curl -o PocketMine-MP.phar https://jenkins.pocketmine.net/job/PocketMine-MP/1266/artifact/PocketMine-MP_1.6dev-1266_fb87165c_API-1.13.1.phar
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100  5053    0  5053    0     0  11935      0 --:--:-- --:--:-- --:--:-- 11917
-
-mcmac:pocketmine htpc$ sudo launchctl unload /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
-mcmac:pocketmine htpc$ ps -ef | grep php
-  502  1458  1289   0  4:55pm ttys000    0:00.00 grep php
-mcmac:pocketmine htpc$ sudo launchctl load /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
-mcmac:pocketmine htpc$ ps -ef | grep php
-  504  1461     1   0  4:56pm ??         0:00.18 ./bin/php5/bin/php ./PocketMine-MP.phar
-  502  1470  1289   0  4:56pm ttys000    0:00.00 grep php
-mcmac:pocketmine htpc$ ps -ef | grep php
-  504  1461     1   0  4:56pm ??         0:02.26 ./bin/php5/bin/php ./PocketMine-MP.phar
-  502  1480  1289   0  4:56pm ttys000    0:00.01 grep php
-  
-  
-mcmac:pocketmine htpc$ file *.phar
+100  5054    0  5054    0     0   4328      0 --:--:--  0:00:01 --:--:--  4330
+mcmac:minecraft-pe minecraft$ file *.phar
 PocketMine-MP.phar:              HTML document text
 PocketMine-MP_1.4.1.phar:        data
 PocketMine-MP_1.4.1dev-936.phar: data
 
 
-OK _ everyone seems to be having issues. Look at github issues
+OK - everyone seems to be having issues. Look at github issues
 
 https://github.com/PocketMine/PocketMine-MP/issues/3815
 
 
-cmac:pocketmine htpc$ curl -o PocketMine-MP.phar https://jenkins.pocketmine.net/job/PocketMine-MP/1266/artifact/PocketMine-MP_1.6dev-1266_fb87165c_API-1.13.1.phar
+mcmac:minecraft-pe minecraft$ curl -o PocketMine-MP.phar https://transfer.sh/17asl/pocketmine-mp-1.6dev-1266-fb87165c-api-1.13.1.phar
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100  5054    0  5054    0     0   2678      0 --:--:--  0:00:01 --:--:--  2678
-mcmac:pocketmine htpc$ file *.phar
-PocketMine-MP.phar:              HTML document text
-PocketMine-MP_1.4.1.phar:        data
-PocketMine-MP_1.4.1dev-936.phar: data
-mcmac:pocketmine htpc$ curl -o PocketMine-MP.phar https://transfer.sh/17asl/pocketmine-mp-1.6dev-1266-fb87165c-api-1.13.1.phar
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100 3761k  100 3761k    0     0   409k      0  0:00:09  0:00:09 --:--:--  863k
-mcmac:pocketmine htpc$ file *.phar
+100 3761k  100 3761k    0     0   421k      0  0:00:08  0:00:08 --:--:--  736k
+mcmac:minecraft-pe minecraft$ launchctl unload /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
+Could not find domain for 
+mcmac:minecraft-pe minecraft$ file *phar
 PocketMine-MP.phar:              data
 PocketMine-MP_1.4.1.phar:        data
 PocketMine-MP_1.4.1dev-936.phar: data
