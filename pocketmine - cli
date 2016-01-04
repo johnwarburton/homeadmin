@@ -71,3 +71,13 @@ mcmac:pocketmine htpc$ ps -ef | grep php
   504  1541     1   0  5:19pm ??         0:00.43 ./bin/php5/bin/php ./PocketMine-MP.phar
 
 
+
+
+
+
+New install instructions here - http://forums.pocketmine.net/threads/pocketmine-mp-1-6dev-1266-is-now-available.13832/page-4
+
+Don't use "get.pocketmine.net" to install PockeMine-MP. Use the latest instal script from github that uses the "alternate_download_url" to get the PocketMine-MP.phar.
+Code:
+curl -sL https://raw.githubusercontent.com/PocketMine/php-build-scripts/master/installer.sh | bash -s - -u -v development
+wget -q -O - https://raw.githubusercontent.com/PocketMine/php-build-scripts/master/installer.sh | bash -s - -u -v development
