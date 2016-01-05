@@ -70,3 +70,24 @@ mcmac:minecraft-pe minecraft$ cat /Library/LaunchDaemons/com.minecraft.minecraft
 $ sudo launchctl load /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
 
 
+Restrictions
+=============
+
+Whitelisting - allow only specific usernames:
+white-list=on
+mcmac:minecraft-pe minecraft$ cat white-list.txt 
+dad
+Griefer
+
+
+SimpleAuth Plugin - simple passwords for users to stop spoofing whitelisting (above)
+
+mcmac:minecraft-pe minecraft$ ls -l plugins/
+total 144
+-rw-r--r--  1 minecraft  staff  10283 Aug 20 14:30 EssentialsTP-1.1.0.phar
+drwxr-xr-x  5 minecraft  staff    170 Aug 23 10:37 SimpleAuth
+-rw-r--r--  1 minecraft  staff  59559 Aug 23 10:28 SimpleAuth_v1.7.1.phar
+drwxr-xr-x  4 minecraft  staff    136 Jan  4 18:50 essentialsTP
+
+
+http://gaming.stackexchange.com/questions/152569/why-cant-i-move-when-a-join-a-server
