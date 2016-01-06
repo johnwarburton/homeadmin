@@ -1,3 +1,4 @@
+# https://github.com/bootstrapbay/contact-form/blob/master/index.php
 <?php
 if (isset($_POST["submit"])) {
     $result='<div class="alert alert-success">Form submitted</div>';
