@@ -95,13 +95,18 @@ http://gaming.stackexchange.com/questions/152569/why-cant-i-move-when-a-join-a-s
 
 Plugins
 =======
+https://forums.pocketmine.net/plugins/simpleauth.4/
+https://forums.pocketmine.net/plugins/simpleauthhelper.1112/
+http://forums.pocketmine.net/plugins/essentialstp.720/
+https://forums.pocketmine.net/plugins/pureperms.862/
 
 Install & load plugins:
 
 mcmac:plugins minecraft$ pwd
 /Users/minecraft/minecraft-pe/plugins
 
-mcmac:plugins minecraft$ curl -L https://github.com/Muirfield/pocketmine-plugins/releases/download/SimpleAuthHelper-2.0.0/SimpleAuthHelper_v2.0.0.phar > SimpleAuthHelper_v2.0.0.phar
+mcmac:minecraft-pe minecraft$ curl -L https://forums.pocketmine.net/plugins/simpleauthhelper.1112/download?version=2780 > plugins/SimpleAuthHelper_v2.0.4.phar
+
 
 mcmac:mcrcon john$ ./mcrcon -t -H 192.168.1.101 -P 19132 -p /bi11vMuA7
 > reload
@@ -116,3 +121,65 @@ register.error.password 6
 > preregister dad hellohello
 registered dad
 OK
+
+https://forums.pocketmine.net/plugins/simpleauthhelper.1112/field?field=documentation
+Player pre-registration
+It is possible to implement a web based pre-registration system with this plugin.
+
+
+
+PurePerms/groups.yml
+Guest:
+  isDefault: true
+  inheritance: []
+  permissions:
+  - -essentials.kit
+  - -essentials.kit.other
+  - -pocketmine.command.me
+  - pchat.colored.format
+  - pchat.colored.nametag
+  - pocketmine.command.list
+  - pperms.command.ppinfo
+  worlds: []
+
+> setuperm dad teleport
+[PurePerms] Added permission teleport to dad successfully.
+
+cat PurePerms/players/dad.yml
+---
+userName: dad
+group: Guest
+permissions:
+- teleport
+worlds: []
+...
+
+> setgperm Guest teleport
+[PurePerms] Added permission teleport to the group successfully.
+
+mcmac:plugins minecraft$ less PurePerms/groups.yml
+
+---
+Guest:
+  isDefault: true
+  inheritance: []
+  permissions:
+  - -essentials.kit
+  - -essentials.kit.other
+  - -pocketmine.command.me
+  - pchat.colored.format
+  - pchat.colored.nametag
+  - pocketmine.command.list
+  - pperms.command.ppinfo
+  - teleport
+  worlds: []
+
+
+Danger!
+> unsetuperm dad teleport
+Connection lost.
+
+crashes right now (PocketMine-MP version 1.6dev-1266 / PurePerms v1.2.2)
+
+
+What about https://github.com/EvolSoft/ServerAuth
