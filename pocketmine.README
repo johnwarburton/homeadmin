@@ -183,3 +183,16 @@ crashes right now (PocketMine-MP version 1.6dev-1266 / PurePerms v1.2.2)
 
 
 What about https://github.com/EvolSoft/ServerAuth
+
+
+SimpleAuthHelper Error
+2016-01-24 [20:08:38] [Server thread/CRITICAL]: "Could not pass event 'pocketmine\event\player\PlayerJoinEvent' to 'SimpleAuth v1.7.1': Illegal offset type on SimpleAuth\EventListener
+
+https://forums.pocketmine.net/threads/simpleauth-error.12967/
+https://github.com/ecoron/SimpleAuth/
+https://s3-eu-west-1.amazonaws.com/devron/SimpleAuth_v1.8.1.phar
+
+https://github.com/PocketMine/SimpleAuth/issues/94
+reload is not enough - need to stop, and auto start brings it back
+
+but still get the /register dialog
