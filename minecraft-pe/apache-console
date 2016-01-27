@@ -1,10 +1,88 @@
 General
 
+Use PHP
+
+http://wiki.vg/Rcon
+X https://gist.github.com/tehbeard/1292348  -slowish
+X https://bitbucket.org/jyc/rcon/src - cant get to work
+0 https://github.com/thedudeguy/PHP-Minecraft-Rcon seems fastest
+
+<?php
+    require 'PHP-Minecraft-rcon.php';
+
+    $r = new Rcon("127.0.0.1",19132,"/bi11vMuA7", 1);
+
+    //Connect and attempt to authenticate
+    if($r->connect()) {
+        $usrinfo = $r ->send_command("usrinfo dad");
+        echo "Got result: \n$usrinfo\n";
+
+        $users = $r -> send_command("list");
+        echo "ONline now: $users\n";
+
+        $resetpwd = $r -> send_command("resetpwd dad");
+        echo "resetpwd returned: $resetpwd\n";
+
+        $preregister = $r -> send_command("preregister dad hello");
+        echo "preregister returned: $preregister\n";
+
+        $preregister = $r -> send_command("preregister dad hellohello");
+        echo "preregister returned: $preregister\n";
+
+    }
+    }
+    else {
+        echo "Failed to authenticate\n";
+    }
+?>
+
+
 1) Edit configuration files:
 * server.properties
+  - use php to display / commit after reading with parse_ini_file
+
+User management
+* SimpleAuth
+* Passwords
+	> resetpwd dad
+	dad unregistered
+	> preregister dad hello
+	register.error.password 6
+	> preregister dad hellohello
+	registered dad
+	OK
 * white-list.txt
+  - can be managed via rcon
+	> whitelist list
+	There are 3 (out of 3 seen) whitelisted players:
+	dad, Griefer, crazycat
+	> whitelist
+	Usage: /whitelist <on|off|list|add|remove|reload>
+
+
 * ops.txt
+  - can be managed via rcon
 * 
+
+Groups
+------
+Use PurePerms
+
+	> listgperms
+	[PurePerms] Usage: /listgperms <group> <page> [world]
+	> groups
+	[PurePerms] All registered groups: Guest, Admin, Owner, OP
+	> listgperms Guest
+	[PurePerms] List of all group permissions from Guest (1 / 1) :
+	[PurePerms] - -essentials.kit
+	[PurePerms] - -essentials.kit.other
+	[PurePerms] - -pocketmine.command.me
+	[PurePerms] - pchat.colored.format
+	[PurePerms] - pchat.colored.nametag
+	[PurePerms] - pocketmine.command.list
+	[PurePerms] - pperms.command.ppinfo
+	[PurePerms] - teleport
+
 
 http://stackoverflow.com/questions/5695145/how-to-read-and-write-to-an-ini-file-with-php
 
