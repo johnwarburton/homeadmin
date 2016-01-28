@@ -44,14 +44,16 @@
   
 - Add user
   - add to whitelist
-  - preregister user password )check for password >= 6 chars)
+  - preregister user password (check for password >= 6 chars)
 - Delete User
 - Reset password
   - resetpwd <user>
-  - preregister user password )check for password >= 6 chars)
+  - preregister user password (check for password >= 6 chars)
   
 
 ## config.ini
-
+  - Edit everything?
+  - have a restore from defaults
+  - maybe save to cloud? config.init and users?
 
 
