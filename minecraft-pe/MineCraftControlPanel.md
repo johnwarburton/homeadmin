@@ -1,5 +1,5 @@
 # Control Panel
-- Default page
+## Default page
   - # players online (/list)
   - name of server (server.properties:motd)
   - /plugins list plugins
