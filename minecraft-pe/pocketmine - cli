@@ -86,7 +86,23 @@ wget -q -O - https://raw.githubusercontent.com/PocketMine/php-build-scripts/mast
 ======
 0.13.2
 
+New Version of Minecraft PE announced 
+https://mobile.twitter.com/argo_major/status/693492816593362944
+http://minecraftpocketedition.wikia.com/wiki/Update_0.13.2
+
+http://minecraft.gamepedia.com/Pocket_Edition
+http://minecraft.gamepedia.com/Pocket_Edition_Alpha_0.13.2
+
+
+Search the code base or search pull requests
+
+This version was funny as 0.13.2 happened with this commit:
 https://github.com/PocketMine/PocketMine-MP/commit/1b6e8c14f0222c62b6acf5f5425a08793feca341
+
+but a proper PR was submitted 2 days earlier
+https://github.com/PocketMine/PocketMine-MP/pull/3924
+
+https://forums.pocketmine.net/threads/pocketmine-mp-0-13-2.14980/
 
 mcmac:minecraft-pe john$ curl -o PocketMine-MP-1.6dev-api-1.13.1-network-0.13.2.phar https://transfer.sh/zQnzc/pocketmine-mp-1.6dev-master-4578-1b6e8c14-api-1.13.1.phar
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -109,16 +125,18 @@ const VERSION = 1;
 const VERSION = 1;
 const VERSION = 1;
 
-mcmac:minecraft-pe minecraft$ strings PocketMine-MP-1.6dev-api-1.13.1-network-0.13.2.phar | egrep '^const.*VERSION'
+mcmac:minecraft-pe minecraft$ strings PocketMine-MP-1.6dev-api-1.13.1-network-0.13.2.phar | egrep '^ *const.*VERSION'
 const VERSION = 1;
 const VERSION = 1;
 const VERSION = 1;
 const ENTRY_VERSION = "v";
 const ENTRY_VERSION = "v";
 const ENTRY_VERSION = "v";
+   const VERSION = '1.6dev-';
 const API_VERSION = "1.13.1";
 const MINECRAFT_VERSION = "v0.13.2 alpha";
 const MINECRAFT_VERSION_NETWORK = "0.13.2";
+    const VERSION = "0.7.0";
 
 
 mcmac:minecraft-pe john$ sudo launchctl unload /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
@@ -138,3 +156,16 @@ mcmac:minecraft-pe minecraft$ tail server.log
 2016-02-08 [20:34:07] [Server thread/INFO]: Default game type: Creative Mode
 2016-02-08 [20:34:07] [Server thread/INFO]: Done (5.485s)! For help, type "help" or "?"
 
+
+
+Version Timing
+==============
+
+
+https://github.com/PocketMine/PocketMine-MP/pull/3924
+
+
+3D Printing
+===========
+http://www.realtimerendering.com/erich/minecraft/public/mineways/index.html
+http://www.realtimerendering.com/erich/minecraft/public/mineways/mineways.html#mcpe
