@@ -88,15 +88,38 @@ wget -q -O - https://raw.githubusercontent.com/PocketMine/php-build-scripts/mast
 
 https://github.com/PocketMine/PocketMine-MP/commit/1b6e8c14f0222c62b6acf5f5425a08793feca341
 
-mcmac:minecraft-pe john$ curl -o PocketMine-MP-0.13.2.phar https://transfer.sh/zQnzc/pocketmine-mp-1.6dev-master-4578-1b6e8c14-api-1.13.1.phar
+mcmac:minecraft-pe john$ curl -o PocketMine-MP-1.6dev-api-1.13.1-network-0.13.2.phar https://transfer.sh/zQnzc/pocketmine-mp-1.6dev-master-4578-1b6e8c14-api-1.13.1.phar
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100 3761k  100 3761k    0     0   402k      0  0:00:09  0:00:09 --:--:--  698k
-mcmac:minecraft-pe john$ file PocketMine-MP-0.13.2.phar
-PocketMine-MP-0.13.2.phar: data
-mcmac:minecraft-pe john$ strings PocketMine-MP-0.13.2.phar | grep '0.13.2'
+
+mcmac:minecraft-pe minecraft$ file PocketMine-MP-1.6dev-api-1.13.1-network-0.13.2.phar
+PocketMine-MP-1.6dev-api-1.13.1-network-0.13.2.phar: data
+
+
+mcmac:minecraft-pe minecraft$ strings PocketMine-MP-1.6dev-api-1.13.1-network-0.13.1.phar | egrep '^const.*VERSION'
+const VERSION = '1.6dev-1266';
+const API_VERSION = "1.13.1";
+const MINECRAFT_VERSION = "v0.13.1 alpha";
+const MINECRAFT_VERSION_NETWORK = "0.13.1";
+const ENTRY_VERSION = "v";
+const ENTRY_VERSION = "v";
+const ENTRY_VERSION = "v";
+const VERSION = 1;
+const VERSION = 1;
+const VERSION = 1;
+
+mcmac:minecraft-pe minecraft$ strings PocketMine-MP-1.6dev-api-1.13.1-network-0.13.2.phar | egrep '^const.*VERSION'
+const VERSION = 1;
+const VERSION = 1;
+const VERSION = 1;
+const ENTRY_VERSION = "v";
+const ENTRY_VERSION = "v";
+const ENTRY_VERSION = "v";
+const API_VERSION = "1.13.1";
 const MINECRAFT_VERSION = "v0.13.2 alpha";
 const MINECRAFT_VERSION_NETWORK = "0.13.2";
+
 
 mcmac:minecraft-pe john$ sudo launchctl unload /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
 Password:
