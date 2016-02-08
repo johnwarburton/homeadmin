@@ -81,3 +81,37 @@ Don't use "get.pocketmine.net" to install PockeMine-MP. Use the latest instal sc
 Code:
 curl -sL https://raw.githubusercontent.com/PocketMine/php-build-scripts/master/installer.sh | bash -s - -u -v development
 wget -q -O - https://raw.githubusercontent.com/PocketMine/php-build-scripts/master/installer.sh | bash -s - -u -v development
+
+
+======
+0.13.2
+
+https://github.com/PocketMine/PocketMine-MP/commit/1b6e8c14f0222c62b6acf5f5425a08793feca341
+
+mcmac:minecraft-pe john$ curl -o PocketMine-MP-0.13.2.phar https://transfer.sh/zQnzc/pocketmine-mp-1.6dev-master-4578-1b6e8c14-api-1.13.1.phar
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 3761k  100 3761k    0     0   402k      0  0:00:09  0:00:09 --:--:--  698k
+mcmac:minecraft-pe john$ file PocketMine-MP-0.13.2.phar
+PocketMine-MP-0.13.2.phar: data
+mcmac:minecraft-pe john$ strings PocketMine-MP-0.13.2.phar | grep '0.13.2'
+const MINECRAFT_VERSION = "v0.13.2 alpha";
+const MINECRAFT_VERSION_NETWORK = "0.13.2";
+
+mcmac:minecraft-pe john$ sudo launchctl unload /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
+Password:
+mcmac:minecraft-pe john$ sudo launchctl load /Library/LaunchDaemons/com.minecraft.minecraft-pe.plist
+
+mcmac:minecraft-pe minecraft$ ps -ef|grep php
+  504 10549     1   0  8:34PM ??         0:13.30 ./bin/php5/bin/php ./PocketMine-MP.phar
+
+mcmac:minecraft-pe minecraft$ pwd
+/Users/minecraft/minecraft-pe
+mcmac:minecraft-pe minecraft$ tail server.log
+2016-02-08 [20:34:07] [Server thread/ERROR]: [SimpleAuthHelper] and submitting a translation to the  developer
+2016-02-08 [20:34:07] [Server thread/INFO]: Starting GS4 status listener
+2016-02-08 [20:34:07] [Server thread/INFO]: Setting query port to 19132
+2016-02-08 [20:34:07] [Server thread/INFO]: Query running on 0.0.0.0:19132
+2016-02-08 [20:34:07] [Server thread/INFO]: Default game type: Creative Mode
+2016-02-08 [20:34:07] [Server thread/INFO]: Done (5.485s)! For help, type "help" or "?"
+
