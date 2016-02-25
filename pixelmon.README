@@ -126,6 +126,9 @@ mcmac:pixelmon-server minecraft$ mkdir mods.old
 mcmac:pixelmon-server minecraft$ mv mods/Pixelmon-1.8-4.0.6-universal.jar mods.old
 
 
+Command line check
+mcmac:pixelmon-server minecraft$ ./java8 -Djava.awt.headless=true -Xmx2G -Xms2G -jar forge-1.8.9-11.15.1.1722-universal.jar  nogui
+
 
 
 
