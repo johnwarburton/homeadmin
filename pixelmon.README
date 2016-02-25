@@ -130,5 +130,8 @@ Command line check
 mcmac:pixelmon-server minecraft$ ./java8 -Djava.awt.headless=true -Xmx2G -Xms2G -jar forge-1.8.9-11.15.1.1722-universal.jar  nogui
 
 
+Should now work:
+
+mcmac:~ john$ sudo launchctl load /Library/LaunchDaemons/com.minecraft.pixelmon.plist
 
 
