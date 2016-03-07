@@ -103,6 +103,18 @@ Seems like apach is installed by default on OS/X
 
 /Users/minecraft/minecraft-pe-control-panel
 
+mcmac:minecraft-pe-control-panel minecraft$ pwd
+/Users/minecraft/minecraft-pe-control-panel
+mcmac:minecraft-pe-control-panel minecraft$ httpd -f `pwd`/httpd.conf
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using mcmac.local. Set the 'ServerName' directive globally to suppress this message
+mcmac:minecraft-pe-control-panel minecraft$ echo $?
+0
+
+http://192.168.1.101:8888/
+http://192.168.1.101:8888/usrinfo-PHP-Minecraft-rcon.php
+http://192.168.1.101:8888/parse_props.php
+
+
 mcmac:minecraft-pe-control-panel minecraft$ ls -l var/run/ htdocs logs
 htdocs:
 total 16

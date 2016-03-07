@@ -23,7 +23,7 @@ java -jar ./maybe/forge-1.8-11.14.3.1450-installer.jar --installServer
 
 http://www.minecraftforge.net/wiki/Installation/Universal#Headless_.28no_GUI.29_servers
 
-3. Run the foge server, not miecraft server, which starts up minecraft
+3. Run the forge server, not miecraft server, which starts up minecraft
 
 4. Download pixelmon
 http://pixelmonmod.com/downloads.php
@@ -70,4 +70,68 @@ bash-3.2# cat /Library/LaunchDaemons/com.minecraft.pixelmon.plist
       <string>/Users/minecraft/pixelmon-server</string>
   </dict>
 </plist>
+
+
+
+
+Upgrade
+
+Client
+http://pixelmonmod.com/wiki/index.php?title=Installation
+http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8.9-11.15.1.1722/forge-1.8.9-11.15.1.1722-installer-win.exe
+http://pixelmongs.com/core/4.2.1/ -> http://download.nodecdn.net/containers/pixelmon/core/Pixelmon-1.8.9-4.2.1-universal.jar
+
+Server
+
+mcmac:pixelmon-server minecraft$ mkdir /Users/minecraft/pixelmon-server/forge-installer/
+mcmac:pixelmon-server minecraft$ mv forge-1.8.9-11.15.1.1722-installer.jar /Users/minecraft/pixelmon-server/forge-installer/
+
+mcmac:mods minecraft$ mkdir forge-installer
+mcmac:mods minecraft$ cd forge-installer
+mcmac:forge-installer minecraft$ curl http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.8.9-11.15.1.1722/forge-1.8.9-11.15.1.1722-installer.jar > forge-1.8.9-11.15.1.1722-installer.jar           
+cd ..
+mcmac:pixelmon-server minecraft$ ./java8 -jar forge-installer/forge-1.8.9-11.15.1.1722-installer.jar --installServer
+Setting up logger: /Users/minecraft/pixelmon-server/mods/forge-installer/forge-1.8.9-11.15.1.1722-installer.jar.log
+Installing server to current directory
+MESSAGE: Data kindly mirrored by Minecraft Forge at http://files.minecraftforge.net/
+MESSAGE: Considering minecraft server jar
+MESSAGE: Downloading minecraft server version 1.8.9
+.
+.
+.
+The server installed successfully, you should now be able to run the file forge-1.8.9-11.15.1.1722-universal.jar
+You can delete this installer file now if you wish
+
+
+mcmac# vi /Library/LaunchDaemons/com.minecraft.pixelmon.plist
+.
+.
+      <string>-Xmx2G</string>
+      <string>-Xms2G</string>
+      <string>-jar</string>
+      <string>forge-1.8-11.15.1.1722-universal.jar</string>
+.
+.
+
+mcmac:pixelmon-server minecraft$ pwd
+/Users/minecraft/pixelmon-server
+mcmac:pixelmon-server minecraft$ cp ~john/Pixelmon-1.8.9-4.2.1-universal.jar mods/
+mcmac:pixelmon-server minecraft$ ls -l mods
+total 1004960
+-rw-r--r--  1 minecraft  staff  235215853 Aug 20  2015 Pixelmon-1.8-4.0.6-universal.jar
+-rw-r--r--  1 minecraft  staff  265505823 Feb 25 18:30 Pixelmon-1.8.9-4.2.1-universal.jar
+-rw-r--r--  1 minecraft  staff   12460745 Aug 23  2015 forgeessentials-1.8-1.8.3.33-server.jar
+-rw-r--r--  1 minecraft  staff    1347677 Aug 23  2015 worldedit-forge-mc1.8-6.1.1-SNAPSHOT-dist.jar
+mcmac:pixelmon-server minecraft$ mkdir mods.old
+mcmac:pixelmon-server minecraft$ mv mods/Pixelmon-1.8-4.0.6-universal.jar mods.old
+
+
+Command line check
+mcmac:pixelmon-server minecraft$ ./java8 -Djava.awt.headless=true -Xmx2G -Xms2G -jar forge-1.8.9-11.15.1.1722-universal.jar  nogui
+
+
+Should now work:
+
+mcmac:~ john$ sudo launchctl load /Library/LaunchDaemons/com.minecraft.pixelmon.plist
+
 
