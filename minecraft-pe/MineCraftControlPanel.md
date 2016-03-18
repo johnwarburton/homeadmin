@@ -37,10 +37,15 @@
 ## Users
 - Defaults to user list
   - Username
+  - Email address (of parent)
   - Online?
     - /usrinfo <player>
-  - List generated from minecraft-pe/plugins/SimpleAuth/players/d/dad.yml
-  and minecraft-pe/players
+  - List generated from
+    - /Users/minecraft/minecraft-pe/plugins/SimpleAuth/players/d/dad.yml
+    - /Users/minecraft/minecraft-pe/players/
+    - /Users/minecraft/minecraft-pe/white-list.txt  
+    - /Users/minecraft/pixelmon-server/whitelist.json
+  
   
 - Add user
   - add to whitelist
@@ -53,7 +58,8 @@
 
 ## config.ini
   - Edit everything?
-  - have a restore from defaults
+    - have an advanced button to edit some things. Flag them as advanced
+  - have a restore from defaults (defaults is a hash & on disk)
   - maybe save to cloud? config.init and users?
 
 
