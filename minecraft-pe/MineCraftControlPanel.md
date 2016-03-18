@@ -61,5 +61,18 @@
     - have an advanced button to edit some things. Flag them as advanced
   - have a restore from defaults (defaults is a hash & on disk)
   - maybe save to cloud? config.init and users?
+  - Defaults (http://www.howtogeek.com/202961/how-to-run-a-local-minecraft-pe-server-for-fun-and-persistent-world-building/)
+    - Creative
+    - Spawn protection on
+    - Whitelist
+    - RCON
+    - Memory
+      - need to query system for available memory. The 256 Mb default should be ok for 20 people
+      - These threads are good for memory usage 
+      	- https://forums.pocketmine.net/threads/how-many-memory-ram-for-slot.15284/
+      	- 30 player 1 Gb RAM https://forums.pocketmine.net/threads/minecraft-pe-server-requirements.5110/
+      	- php.ini seems to need editing for more memory - https://forums.pocketmine.net/threads/maximum-memory.15040/
+      	- 
+      - 
 
 
