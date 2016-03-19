@@ -236,3 +236,12 @@ $ini_array = parse_ini_file("/Users/minecraft/minecraft-pe/server.properties");
 print_r($ini_array);
 
 ?>
+
+
+Which rcon provider to use?
+
+* usrinfo.php uses mcrcon.php (https://github.com/SinZ163/SinZPHPBot/blob/master/plugins/Minecraft2/mcrcon.php
+via http://wiki.vg/Rcon)
+  - SLOW
+* usrinfo-PHP-Minecraft-rcon.php uses PHP-Minecraft-rcon.php via https://github.com/thedudeguy/PHP-Minecraft-Rcon/blob/master/rcon.php
+  - FAST
