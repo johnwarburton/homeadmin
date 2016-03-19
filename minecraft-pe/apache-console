@@ -2,6 +2,15 @@ General
 
 Use PHP
 
+Which rcon provider to use?
+
+* usrinfo.php uses mcrcon.php (https://github.com/SinZ163/SinZPHPBot/blob/master/plugins/Minecraft2/mcrcon.php
+via http://wiki.vg/Rcon)
+  - SLOW
+* usrinfo-PHP-Minecraft-rcon.php uses PHP-Minecraft-rcon.php via https://github.com/thedudeguy/PHP-Minecraft-Rcon/blob/master/rcon.php
+  - FAST
+  
+
 http://wiki.vg/Rcon
 X https://gist.github.com/tehbeard/1292348  -slowish
 X https://bitbucket.org/jyc/rcon/src - cant get to work
@@ -238,10 +247,4 @@ print_r($ini_array);
 ?>
 
 
-Which rcon provider to use?
 
-* usrinfo.php uses mcrcon.php (https://github.com/SinZ163/SinZPHPBot/blob/master/plugins/Minecraft2/mcrcon.php
-via http://wiki.vg/Rcon)
-  - SLOW
-* usrinfo-PHP-Minecraft-rcon.php uses PHP-Minecraft-rcon.php via https://github.com/thedudeguy/PHP-Minecraft-Rcon/blob/master/rcon.php
-  - FAST
