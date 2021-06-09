@@ -6,4 +6,4 @@ $ sqlite3 "/etc/pihole/pihole-FTL.db" "SELECT domain FROM queries WHERE client =
 
 https://discourse.pi-hole.net/t/activate-group-with-cron/32660/16
 
-# sqlite3 /etc/pihole/gravity.db "update 'group' set enabled = 1 where name like '%Block%'"
+```# sqlite3 /etc/pihole/gravity.db "update 'group' set enabled = 1 where name like '%Block%'"```
